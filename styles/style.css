@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media (max-width: 767px) {
+    nav{
+        height: 11vh;
+    }
+    #logo{
+        width: 64px;
+        height: 36px;
+    }
+    #headerDiv{
+        width: 87vw;
+    }
+    .navBtn,#email,#number,#btns{
+        display: none;
+    }
+    #catalog{
+        width: 100px;
+        height: 27px;
+        font-size: 1em;
+    }
+    #smartphoneDiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        #phone{
+            width: 24px;
+            height: 24px;
+        }
+        #panelMenu{
+            width: 24px;
+            height: 10px;
+        }
+    }
+    #info{
+        width: none;
+    }
+    #img{
+        width: 97.5%;
+        height: 97.5%;
+    }
+    #circleElem{
+        width: 330px;
+        height: 330px;
+    }
+    #insideElems{
+        #txt1{
+            font-size: 2em;
+        }
+        #txt2{
+            font-size: 1em;
+        }
+        #secondText{
+            font-size: 0.8em;
+        }
+    }
+    #panel{
+        height: 60vh;
+    }
+    #someDiv{
+        display:grid;
+        grid-template-columns:100%;
+        grid-template-rows:180px 180px;
+        justify-content:space-between;
+        gap:40px;
+    }
+}
+@media (min-width: 1024px) {
+    nav{
+        height: 12.5vh;
+    }
+    #headerDiv{
+        width: 80vw;
+    }
+    #logo{
+        width: 106px;
+        height: 60px;
+    }
+    .navBtn{
+        font-size: 1em;
+    }
+    #catalog{
+        width: 7.5vw;
+        height: 5vh;
+    }
+    #email{
+        font-size: 1vw;
+    }
+    #number{
+        font-size: 1.2vw;
+    }
+    #btns{
+        width: 20vw;
+        min-width: 32%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #smartphoneDiv{
+        display: none;
+    }
+    #info{
+        width: 35vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    }
+    #img{
+        width: 97.5%;
+        height: 94.5%;
+    }
+    #circleElem{
+        width: 440px;
+        height: 440px;
+    }
+    #insideElems{
+        #txt1{
+            font-size: 2.5em;
+        }
+        #txt2{
+            font-size: 1.2em;
+        }
+        #secondText{
+            font-size: 1em;
+        }
+    }
+    #panel{
+        height: 85vh;
+    }
+    #someDiv{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:36vh;
+        justify-content:space-between;
+        gap:40px;
+    }
+}
+
+
+body{
+    min-width: 330px;
+}
+header{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    nav{
+        background-color: #3B3937;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        #headerDiv{
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            #logo{
+                background-image: url(../assets/logo.svg);
+                background-size: cover;
+            }
+            #smartphoneDiv{
+                width: 20vw;
+                div{
+                    background-size: cover;
+                }
+                #phone{
+                    background-image: url(../assets/phone.svg);
+                }
+                #panelMenu{
+                    background-image: url(../assets/menu.svg);
+                }
+            }
+            #info{
+                #email, #number{
+                    color:#FFD6A8;
+                }
+                #number{
+                    font-weight: 700;
+                }
+                #catalog{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #A9845C;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    #panel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(../assets/panelBG.png);
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        #circleElem{
+            background-image: url(../assets/woodenTexture.png);
+            background-size: cover;
+            border-radius: 100%;
+            backdrop-filter: blur(5px);
+            
+            #insideElems{
+                backdrop-filter: blur(2px);
+                height: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                font-weight: 700;
+                #mainTextOfPanel{
+                    height: 160px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    #txt2{
+                        color: #FFD6A8;
+                    }
+                }
+            }
+            #panelBtn{
+                width: 150px;
+                height: 50px;
+                background-color: #A9845C;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #pagination,#arrows{
+                display: flex;
+                align-items: center;
+            }
+            #arrows>div{
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                background-color: white;
+                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #arrows{
+                position: absolute;
+                left: 70%;
+                top: 85%;
+            }
+            #arrows>div:first-child{
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                transform: translateX(10px);
+            }
+        }
+
+    }
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #someDiv{
+        width:80vw;
+        text-align:center;
+        .someTxt{
+            color: #B14101;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .someImg{
+            width: 100%;
+            height: 100%;
+            background-size:cover;
+            background-position: 50% 50%;
+        }
+        #someImg1{background-image: url(../assets/someImg1.jpg);}
+        #someImg2{background-image: url(../assets/someImg2.png);}
+    }
+}
