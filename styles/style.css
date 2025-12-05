@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    user-select: none;
+    transition: 0.3s ease;
+    box-sizing: border-box;
 }
 @media (max-width: 767px) {
     nav{
@@ -272,6 +275,10 @@ main{
     #someDiv{
         width:80vw;
         text-align:center;
+        >div{
+            height: 100%;
+            overflow: hidden;
+        }
         .someTxt{
             color: #B14101;
             font-size: 20px;
@@ -285,5 +292,91 @@ main{
         }
         #someImg1{background-image: url(../assets/someImg1.jpg);}
         #someImg2{background-image: url(../assets/someImg2.png);}
+    }
+    #itemsShowcase{
+        width: 80vw;
+        #Title{
+            height: 10vh;
+            display: flex;
+            align-items: end;
+
+            font-size: 4em;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+        }
+        #itemsFilter{
+            height: 8vh;
+            display: grid;
+            align-items: end;
+            grid-template-columns: 2fr 1fr 2.5fr 1.2fr 1.8fr;
+            >div{
+                height: 6vh;
+                border: 1px #DADADA solid;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1em;
+                text-transform: uppercase;
+                font-weight: lighter;
+            }
+            >div:hover{
+                border: 1px #3B3937 solid;
+                font-weight: 500;
+            }
+        }
+        #items{
+            display: grid;
+            grid-template-columns: repeat(3, 25vw);
+            justify-content: space-between;
+            row-gap: 5vh;
+            .item{
+                padding: 15px;
+                width: 25vw;
+                height: 25vw;
+                border: 1px #DADADA solid;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                color: #3B3937;
+                font-size: 1.2em;
+                #itemTitle{
+                    font-weight: 400;
+                }
+                #itemPrice{
+                    font-weight: 700;
+                }
+                #itemImg{
+                    align-self: center;
+                    display: flex;
+                    justify-content: center;
+                    height: 15vw;
+                    img{
+                        height: 100%;
+                    }
+                }
+                #underItemElem{
+                    display: flex;
+                    justify-content: space-between;
+                    color: #B14101;
+                    font-weight: 700;
+                }
+                #pagination{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    div{
+                        width: 1vh;
+                        height: 1vh;
+                        background-color: #DADADA;
+                        border-radius: 100%;
+                    }
+                    div:first-child{
+                        width: 1.25vh;
+                        height: 1.25vh;
+                        background-color: #3B3937;
+                    }
+                }
+            }
+        }
     }
 }
