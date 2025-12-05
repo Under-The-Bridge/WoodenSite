@@ -108,11 +108,13 @@ body{
             
         }
         #itemsFilter{
+            overflow-x: scroll;
+            scrollbar-width: none;
+        }
+        #itemsFilter>div{
             width:225vw;
-            height: 4vh;
             display: grid;
             grid-template-columns: 2fr 1fr 2.5fr 1.2fr 1.8fr;
-            overflow:hidden;
             
             >div{
                 height: 6vh;
