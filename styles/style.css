@@ -10,6 +10,37 @@ body{
     padding-bottom: 2.5vh;
 }
 @media (max-width: 767px) {
+    #hiddenMenu{
+        text-align:center;
+        position:absolute;
+        height:75vh;
+        width:100%;
+        min-width: 330px;
+        background-color:#3B3937;
+        z-index:1;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-evenly;
+        #menu-btns{
+            height:35vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+        }
+        #menu-btns>div{
+            font-size:7vw;
+            font-weight:lighter;
+        }
+        #email,#number{
+            display: flex;
+            flex-direction:column;
+            height:5vh;
+            font-size:7vw;
+            color:#FFD6A8;
+        }
+        #email{font-size:4vw;}
+    }
     header{
         nav{
             height: 11vh;
@@ -212,7 +243,7 @@ body{
         }
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     header{
         nav{
             height: 12.5vh;
@@ -230,6 +261,7 @@ body{
         #catalog{
             width: 7.5vw;
             height: 5vh;
+            font-size: 1.2vw;
         }
         #email{
             font-size: 1vw;
@@ -239,7 +271,7 @@ body{
         }
         #btns{
             width: 20vw;
-            min-width: 32%;
+            min-width: 38%;
             display: flex;
             justify-content: space-between;
             align-items: center;
